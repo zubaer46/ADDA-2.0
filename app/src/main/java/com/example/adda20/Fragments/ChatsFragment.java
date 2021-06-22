@@ -43,11 +43,11 @@ public class ChatsFragment extends Fragment {
 
 
 
-        View view = inflater.inflate(R.layout.fragment_chats,
+        View view = inflater.inflate(R.layout.fragment_users,
                 container,
                 false);
 
-        recyclerView = view.findViewById(R.id.recycler_view2);
+        recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
