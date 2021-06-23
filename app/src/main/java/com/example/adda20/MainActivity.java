@@ -25,10 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-//import net.lebdevelopers.firebaseapp.Fragments.ChatsFragment;
-//import net.lebdevelopers.firebaseapp.Fragments.ProfileFragment;
-//import net.lebdevelopers.firebaseapp.Fragments.UsersFragment;
-//import net.lebdevelopers.firebaseapp.Model.Users;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
