@@ -64,7 +64,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="56dp"
         android:text="Login Now"
-        android:background="@android:color/transparent"
+        android:background="@drawable/gradient_registter"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
