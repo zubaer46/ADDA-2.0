@@ -80,7 +80,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/gradient_registter"
         android:text="Not Member? Register Now"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
