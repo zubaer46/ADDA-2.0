@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.ProfileFragment">
 
+<<<<<<< HEAD
+=======
+    <!-- TODO: Update blank fragment layout -->
+>>>>>>> origin/master
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
