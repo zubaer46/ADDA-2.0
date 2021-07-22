@@ -12,10 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+
 import com.example.adda20.MessageActivity;
 import com.example.adda20.Model.Users;
 import com.example.adda20.R;
-
 
 import java.util.List;
 

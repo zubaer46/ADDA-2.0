@@ -13,10 +13,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.adda20.Fragments.ChatsFragment;
-import com.example.adda20.Fragments.ProfileFragment;
-import com.example.adda20.Fragments.UsersFragment;
-import com.example.adda20.Model.Users;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,7 +22,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-
+import com.example.adda20.Fragments.ChatsFragment;
+import com.example.adda20.Fragments.ProfileFragment;
+import com.example.adda20.Fragments.UsersFragment;
+import com.example.adda20.Model.Users;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -68,13 +67,24 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
         viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
-       viewPagerAdapter.addFragment(new UsersFragment(), "Users");
+        viewPagerAdapter.addFragment(new UsersFragment(), "Users");
         viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
 
 
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
