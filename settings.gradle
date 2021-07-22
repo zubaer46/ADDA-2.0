@@ -1,2 +1,3 @@
-include ':app'
+
 rootProject.name = "ADDA 2.0"
+include ':app'

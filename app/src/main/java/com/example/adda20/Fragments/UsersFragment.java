@@ -46,6 +46,8 @@ public class UsersFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_users, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
+        LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(manager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 

@@ -65,7 +65,7 @@ public class MessageActivity extends AppCompatActivity {
 
         // Widgets
         imageView = findViewById(R.id.imageview_profile);
-        username  = findViewById(R.id.username);
+        username  = findViewById(R.id.usernamey);
         sendBtn = findViewById(R.id.btn_send);
         msg_editText = findViewById(R.id.text_send);
 

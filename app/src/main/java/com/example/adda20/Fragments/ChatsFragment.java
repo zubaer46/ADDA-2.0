@@ -51,6 +51,9 @@ public class ChatsFragment extends Fragment {
                 false);
 
         recyclerView = view.findViewById(R.id.recycler_view2);
+        LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(manager);
+        
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
