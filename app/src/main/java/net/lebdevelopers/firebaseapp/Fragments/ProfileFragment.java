@@ -87,16 +87,18 @@ public class ProfileFragment extends Fragment {
        reference.addValueEventListener(new ValueEventListener() {
            @Override
            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+               if (isAdded()) {
 
-               Users user = dataSnapshot.getValue(Users.class);
-               username.setText(user.getUsername());
+                   Users user = dataSnapshot.getValue(Users.class);
+                   username.setText(user.getUsername());
 
-               if (user.getImageURL().equals("default")){
-                   imageView.setImageResource(R.mipmap.ic_launcher);
-               }else{
-                   Glide.with(getContext()).load(user.getImageURL()).into(imageView);
+                   if (user.getImageURL().equals("default")) {
+                       imageView.setImageResource(R.mipmap.ic_launcher);
+                   } else {
+                       Glide.with(getContext()).load(user.getImageURL()).into(imageView);
+                   }
+
                }
-
            }
 
            @Override
