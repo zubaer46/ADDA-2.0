@@ -1,3 +1,2 @@
-
-rootProject.name = "ADDA 2.0"
+rootProject.name='FirebaseApp'
 include ':app'
