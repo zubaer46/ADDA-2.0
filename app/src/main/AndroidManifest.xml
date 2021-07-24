@@ -18,7 +18,8 @@ package="net.lebdevelopers.firebaseapp">
     <activity android:name=".MainActivity"
         android:theme="@style/AppTheme2"/>
     <activity android:name=".RegisterActivity" />
-    <activity android:name=".Login_Activity">
+    <activity android:name=".Login_Activity"/>
+    <activity android:name=".StartActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
