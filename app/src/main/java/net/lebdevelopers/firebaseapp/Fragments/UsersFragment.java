@@ -26,9 +26,6 @@ import net.lebdevelopers.firebaseapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class UsersFragment extends Fragment {
 
     private RecyclerView recyclerView;
