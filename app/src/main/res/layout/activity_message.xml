@@ -21,11 +21,11 @@
             android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/MenuStyle">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:id="@+id/imageview_profile"
-                app:srcCompat="@mipmap/ic_launcher"/>
+                android:src="@drawable/profile_img"/>
 
             <TextView
                 android:layout_width="wrap_content"
