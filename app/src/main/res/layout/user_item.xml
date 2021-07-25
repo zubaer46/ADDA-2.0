@@ -7,10 +7,10 @@
 
     <TextView
         android:id="@+id/textView30"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="32dp"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="72dp"
         android:layout_height="72dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/statusimageON"
         android:layout_width="10dp"
         android:layout_height="10dp"
@@ -38,9 +38,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.653"
-        app:srcCompat="@drawable/gradient_registter" />
+        app:srcCompat="@drawable/green_circle" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/statusimageOFF"
         android:layout_width="10dp"
         android:layout_height="10dp"
@@ -51,5 +51,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusimageON"
-        app:srcCompat="@drawable/background_right" />
+        app:srcCompat="@drawable/white_circle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
