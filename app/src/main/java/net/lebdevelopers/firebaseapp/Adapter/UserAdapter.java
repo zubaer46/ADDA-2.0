@@ -12,8 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import net.lebdevelopers.firebaseapp.MessageActivity;
+import net.lebdevelopers.firebaseapp.Model.Chat;
 import net.lebdevelopers.firebaseapp.Model.Users;
 import net.lebdevelopers.firebaseapp.R;
 
@@ -24,6 +32,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     private Context context;
     private List<Users> mUsers;
     private boolean isChat;
+    String thelastMessage;
 
 
     // Constructor
@@ -57,7 +66,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                     .load(users.getImageURL())
                     .into(holder.imageView);
         }
-
+        if(isChat){
+            lastMessage(users.getId(), holder.last_msg);
+        }else{
+            holder.last_msg.setVisibility(View.GONE);
+        }
 
         // Status check
         if (isChat){
@@ -97,6 +110,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         public ImageView imageView;
         public ImageView imageViewON;
         public ImageView imageViewOFF;
+        public TextView last_msg;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -106,13 +120,48 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             imageView = itemView.findViewById(R.id.imageView);
             imageViewON = itemView.findViewById(R.id.statusimageON);
             imageViewOFF = itemView.findViewById(R.id.statusimageOFF);
-
+            last_msg = itemView.findViewById(R.id.last_msg);
 
         }
     }
 
 
+    //Check for last msg
+    private void lastMessage(String userid, TextView last_msg){
+        thelastMessage = "default";
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Chats");
 
+
+        reference.addValueEventListener(new ValueEventListener(){
+            @Override
+           public void onDataChange(@NonNull DataSnapshot dataSnapshot){
+              for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                  Chat chat = snapshot.getValue(Chat.class);
+                  if(chat.getReceiver().equals(firebaseUser.getUid()) && chat.getSender().equals(userid) ||
+                          chat.getReceiver().equals(userid) && chat.getSender().equals(firebaseUser.getUid())){
+                      thelastMessage = chat.getMessage();
+
+
+                  }
+              }
+              switch (thelastMessage){
+                  case "default":
+                      last_msg.setText("No Message");
+                      break;
+                  default:
+                      last_msg.setText(thelastMessage);
+                      break;
+              }
+              thelastMessage = "default";
+           }
+           @Override
+            public void onCancelled(@NonNull DatabaseError databseError){
+
+           }
+        });
+
+    }
 
 
 }

@@ -9,14 +9,30 @@
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginRight="215dp"
+        android:text="Last Message"
+        android:textColor="@color/grey"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        android:maxLines="1"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
@@ -35,24 +51,24 @@
         android:layout_height="10dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintCircleRadius="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.653"
-        app:srcCompat="@drawable/green_circle"
-        app:layout_constraintCircleRadius="30dp"
-        />
+        app:srcCompat="@drawable/green_circle" />
 
     <ImageView
         android:id="@+id/statusimageOFF"
         android:layout_width="10dp"
         android:layout_height="10dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.653"
-        app:layout_constraintTop_toBottomOf="@+id/statusimageON"
-        app:srcCompat="@drawable/white_circle"
         app:layout_constraintCircleRadius="30dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusimageON"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/white_circle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
