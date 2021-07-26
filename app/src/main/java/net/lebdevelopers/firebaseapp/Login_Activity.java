@@ -1,15 +1,16 @@
 package net.lebdevelopers.firebaseapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login_Activity extends AppCompatActivity {
 
     EditText userETLogin, passETlogin;
+    TextView forgot_password;
     Button loginBtn, RegisterBtn;
 
     // Firebase:
@@ -52,11 +54,17 @@ public class Login_Activity extends AppCompatActivity {
         passETlogin = findViewById(R.id.editText3);
         loginBtn    = findViewById(R.id.buttonLogin);
         RegisterBtn = findViewById(R.id.registerBtn);
+        forgot_password = findViewById(R.id.forgot_password);
 
         // Firebase Auth:
         auth = FirebaseAuth.getInstance();
-
-
+        //Forget Password
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login_Activity.this, ResetPasswordActivity.class));
+            }
+        });
 
         // Register Button:
         RegisterBtn.setOnClickListener(new View.OnClickListener() {

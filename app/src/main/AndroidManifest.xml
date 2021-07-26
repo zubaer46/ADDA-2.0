@@ -26,6 +26,8 @@ package="net.lebdevelopers.firebaseapp">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+    <activity android:name=".ResetPasswordActivity"
+        android:parentActivityName=".Login_Activity"></activity>
 </application>
 
 </manifest>

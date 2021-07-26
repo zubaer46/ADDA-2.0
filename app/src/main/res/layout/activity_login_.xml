@@ -82,14 +82,27 @@
         <Button
             android:id="@+id/registerBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_height="36dp"
             android:layout_gravity="left"
             android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
             android:text="Not Member? Register Now"
             android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
             android:background="@android:color/transparent"
-            android:textStyle="bold"/>
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Forgot your password?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </RelativeLayout>
