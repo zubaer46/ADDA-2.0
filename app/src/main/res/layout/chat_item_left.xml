@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
     android:padding="8dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:id="@id/profile_image"
@@ -20,12 +20,13 @@
         android:lineSpacingExtra="2dp"
         android:paddingLeft="20dp"
         android:paddingTop="4dp"
-        android:paddingRight="30dp"
+        android:paddingRight="20dp"
         android:paddingBottom="10dp"
         android:text="Hi, How are you?"
         android:textColor="@color/black"
-        android:textSize="14sp"
-        android:background="@drawable/background_left"/>
+        android:textSize="16sp"
+        android:background="@drawable/background_left"
+        />
 
     <TextView
         android:id="@+id/txt_seen_status"
