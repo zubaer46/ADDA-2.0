@@ -6,6 +6,7 @@ public class Users {
     private String username;
     private String imageURL;
     private String status;
+    private String search;
 
 
     // Constructors;
@@ -17,6 +18,7 @@ public class Users {
         this.username = username;
         this.imageURL = imageURL;
         this.status   = status;
+        this.search   = search;
     }
 
 
@@ -52,5 +54,13 @@ public class Users {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 }
